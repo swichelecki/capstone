@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="capstone">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Capstone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/assets/images/acapstone.png"/>
+    <link rel="stylesheet" type="text/css" href="/styles/sidebar.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div id="scrollArea">
+        <a id="top"></a>
+            <nav class="nav">
+                <div class="logo-container">
+                    <a ui-sref="landing">
+                        <h1 class="cap">Capstone</h1>
+                    </a>
+                </div>
+                <div class="menu-buttons-container"> 
+                <ul>
+                    <li><a ui-sref="pageTwo">Page</a></li>
+                    <li><a ui-sref="pageThree">Page</a></li>
+                    <li><a >Page</a></li>
+                    <li><a >Page</a></li> 
+                </ul> 
+                </div>   
+            </nav> 
+    </div>
+    
+    <ui-view></ui-view>
+        
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="/scripts/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyAVB5oPPKRYixr9rBseIaPdlPRJcLRzBNo",
+    authDomain: "capstone-44d76.firebaseapp.com",
+    databaseURL: "https://capstone-44d76.firebaseio.com",
+    storageBucket: "capstone-44d76.appspot.com",
+    messagingSenderId: "791259100561"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/services/Fixtures.js"></script>
+    <script src="/scripts/services/Email.js"></script>
+    <script src="/scripts/controllers/LandingCtrl.js"></script>
+    <script src="/scripts/controllers/PageTwoCtrl.js"></script>
+    <script src="/scripts/controllers/PageThreeCtrl.js"></script>
+    <script src="/scripts/directives/sidebar.js"></script>
+    <script src="/scripts/directives/toggle.js"></script>
+    <script src="/scripts/runBlock.js"></script>
+</body>
+</html>

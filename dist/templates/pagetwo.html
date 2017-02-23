@@ -1,0 +1,28 @@
+<ng-include src="'templates/sidebar.html'"></ng-include>
+<ng-include src="'templates/small-nav.html'"></ng-include>
+<section class="body-color">
+    <section class="page-content container">
+        <div class="top-div column full">
+            <img src="https://dummyimage.com/950x400/ffffff/000000.jpg&text=950+x+400">
+            <p>{{ pageTwo.objData.dataLong }}</p>
+        </div>
+        <div class="left-div column half">
+            <img src="https://dummyimage.com/450x300/ffffff/000000.jpg&text=450+x+300">
+            <p>{{ pageTwo.objData.dataShort }}</p>
+        </div>
+        <div class="right-div column half">
+            <img src="https://dummyimage.com/450x300/ffffff/000000.jpg&text=450+x+300">
+            <p>{{ pageTwo.objData.dataShort }}</p>
+        </div>
+        <section class="footer container">
+            <div class="menu-buttons-container"> 
+                <ul>
+                    <li><a ui-sref="landing">Home</a></li>
+                    <li><a ng-click="pageTwo.gotoTop()">Page</a></li>
+                    <li><a ui-sref="pageThree">Page</a></li>
+                    <li><a>Page</a></li>
+                </ul>
+            </div>  
+        </section>
+    </section>  
+</section>    

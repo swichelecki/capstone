@@ -1,0 +1,51 @@
+<ng-include src="'templates/sidebar.html'"></ng-include>
+<ng-include src="'templates/small-nav.html'"></ng-include>
+<section class="carousel">
+        <div uib-carousel active="active" interval="landing.myInterval" no-wrap="false" no-pause="true">
+                <div uib-slide ng-repeat="slide in landing.slides track by slide.id" index="slide.id">
+                    <a ui-sref="{{slide.url}}">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                    </a>
+                </div>    
+        </div>
+</section>
+<section class="email-container">
+    <section class="container clearfix">
+        <div class="email-div-one column half">
+            <h2 class="newsletter">Sign up for our newsletter!</h2>
+        </div>
+        <div class="email-div-two column half">
+           <input type="text" class="input" ng-model="emailAddress" ng-init="emailAddress='your email address'" onfocus="value=''">
+            <a class="add-email" ng-click="landing.newEmail.addEmail(emailAddress)">
+                <span class="ion-ios-arrow-forward"></span>
+            </a>  
+        </div>
+    </section>  
+</section>
+<section class="body-color">
+    <section class="page-content container clearfix">
+        <div class="top-div column full small-padding small-width">
+            <img src="https://dummyimage.com/950x400/ffffff/000000.jpg&text=950+x+400">
+            <p>{{ landing.objData.dataLong }}</p>
+        </div>
+        <div class="left-div column half small-padding">
+            <img src="https://dummyimage.com/450x300/ffffff/000000.jpg&text=450+x+300">
+            <p>{{ landing.objData.dataShort }}</p>
+        </div>
+        <div class="right-div column half small-padding">
+            <img src="https://dummyimage.com/450x300/ffffff/000000.jpg&text=450+x+300">
+            <p>{{ landing.objData.dataShort }}</p>
+        </div>
+    <section class="footer container">
+    <div class="menu-buttons-container"> 
+        <ul>
+            <li><a ng-click="landing.gotoTop()">Home</a></li>
+            <li><a ui-sref="pageTwo">Page</a></li>
+            <li><a ui-sref="pageThree">Page</a></li>
+            <li><a>Page</a></li>
+        </ul>
+    </div> 
+    </section>
+    </section>
+</section>
+   

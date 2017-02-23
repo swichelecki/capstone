@@ -1,0 +1,20 @@
+<ng-include src="'/templates/sidebar.html'"></ng-include>
+<ng-include src="'templates/small-nav.html'"></ng-include>
+<section class="body-color">
+    <section class="page-content container">
+        <div ng-repeat="widgets in pageThree.widgets track by $index" class="left-div column half">
+            <img ng-src="{{widgets.image}}" width="450">
+            <p>{{ widgets.dataShort }}</p>
+        </div>
+        <section class="footer container">
+            <div class="menu-buttons-container"> 
+                <ul>
+                    <li><a ui-sref="landing">Home</a></li>
+                    <li><a ui-sref="pageTwo">Page</a></li>
+                    <li><a ng-click="pageThree.gotoTop()">Page</a></li>
+                    <li><a>Page</a></li>
+                </ul>
+            </div>  
+        </section>
+    </section>  
+</section>    
