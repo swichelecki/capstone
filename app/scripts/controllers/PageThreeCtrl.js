@@ -1,11 +1,11 @@
 (function() {
-    function PageThreeCtrl(Fixtures, $anchorScroll, $location) {
+    function PageThreeCtrl(Fixtures, $anchorScroll, $location, $state) {
         
         /*
          *@desc scope object getting fixture data - NOT IN USE
          */
         
-        this.objData = Fixtures.returnObject();
+       // this.objData = Fixtures.returnObject();
         
         /*
         *@desc scope object getting fixture data
@@ -18,7 +18,7 @@
         */
         
         this.widgets = Fixtures.returnDataArray(1);
-        
+               
         /*
         *@desc forces document to scroll to top on state change
         */
@@ -48,9 +48,16 @@
             tallFooter[0].style.minHeight = '64.5rem';
         } 
         
+        
+     /*   this.reloadPage = function() {
+            $state.reload();
+        }; */
+        
+        
+        
     }
     
     angular
         .module('capstone')
-        .controller('PageThreeCtrl', ['Fixtures', '$anchorScroll', '$location', PageThreeCtrl]);
+        .controller('PageThreeCtrl', ['Fixtures', '$anchorScroll', '$location', '$state', PageThreeCtrl]);
 })();

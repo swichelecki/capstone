@@ -1,0 +1,21 @@
+<ng-include src="'templates/sidebar.html'"></ng-include>
+<ng-include src="'templates/small-nav.html'"></ng-include>
+<section class="body-color">
+    <section class="page-content container">
+        <div style="padding:18rem 18rem;">
+           <!-- <h1>{{ album.album.data }}</h1> -->
+           <h1>{{ album.widgets.albumTitle.copy }}</h1>
+         <!--  <h1>{{ album.id }}</h1>     -->   
+        </div>    
+        <section class="footer container">
+            <div class="menu-buttons-container"> 
+                <ul>
+                    <li><a ui-sref="landing">Home</a></li>
+                    <li><a ui-sref="pageTwo">Page</a></li>
+                    <li><a ui-sref="pageThree">Page</a></li>
+                    <li><a>Page</a></li>
+                </ul>
+            </div>  
+        </section>
+    </section>  
+</section>   

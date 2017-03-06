@@ -3,18 +3,22 @@
 <section class="body-color">
     <section class="page-content container">
         <div ng-repeat="widgets in pageThree.widgets track by $index" class="left-div column half">
-            <img ng-src="{{widgets.image}}" width="450">
+           <!-- <a ui-sref="album" ng-click="pageThree.sendIndex(widgets.index)"> -->
+           <!-- <a ui-sref="album({id: widgets.albumTitle.id})" ng-click="pageThree.sendIndex(widgets.index)">-->
+            <a ui-sref="album({data: widgets.index})">
+                <img ng-src="{{widgets.image}}" width="450">  
+            </a> 
             <p>{{ widgets.dataShort }}</p>
         </div>
-        <section class="footer container">
+     </section>  
+     <section class="footer container">
             <div class="menu-buttons-container"> 
                 <ul>
                     <li><a ui-sref="landing">Home</a></li>
                     <li><a ui-sref="pageTwo">Page</a></li>
                     <li><a ng-click="pageThree.gotoTop()">Page</a></li>
-                    <li><a>Page</a></li>
+                    <li><a ui-sref="album">Page</a></li>
                 </ul>
             </div>  
-        </section>
-    </section>  
+        </section>  
 </section>    

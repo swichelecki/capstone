@@ -12,13 +12,17 @@
             controller: 'LandingCtrl as landing',
             templateUrl: '/templates/landing.html'
         }).state('pageTwo', {
-            url: 'pageTwo',
+            url: '/pageTwo',
             controller: 'PageTwoCtrl as pageTwo',
             templateUrl: '/templates/pagetwo.html'
         }).state('pageThree', {
-            url: 'pageThree',
+            url: '/pageThree',
             controller: 'PageThreeCtrl as pageThree',
-            templateUrl: 'templates/pagethree.html'
+            templateUrl: '/templates/pagethree.html'
+        }).state('album', {
+            url: '/album/:data',
+            controller: 'AlbumCtrl as album',
+            templateUrl: '/templates/album.html'
         });
     
     }
